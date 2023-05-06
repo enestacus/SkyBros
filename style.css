@@ -1,0 +1,374 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#body{
+	background:khaki;
+}
+
+
+#header{
+	display: flex;	
+}
+
+
+.main-header{
+	background: darkolivegreen;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+	flex: 8;
+	min-width: 340px;
+}
+
+.main-header a{
+	color: white;
+	text-decoration: none;
+	transition: 1.2s ease;
+}
+
+.main-header a:hover{
+	color: black;
+}
+
+.logo{
+	flex: 1;
+	height: 80px;
+}
+
+.menu{
+	display: flex;
+	background: darkkhaki;
+	justify-content: space-around;
+	list-style: none;
+	padding: 10px 0;
+}
+
+.choices a{
+	text-decoration: none;
+	color: darkolivegreen;
+	font-weight: bold;
+}
+
+.choices a:hover{
+	color: white;
+}
+
+.cheeseburger{
+	display: none;
+	cursor: pointer;
+}
+
+.line{
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px 0 5px 95%;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+	background: darkolivegreen;
+}
+
+@media(max-width:768px){
+	.cheeseburger{
+		display: block;
+	}
+
+	.cheeseburger.active .line:nth-child(2){
+		opacity: 0;
+	}
+
+	.cheeseburger.active .line:nth-child(1){
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	.cheeseburger.active .line:nth-child(3){
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.menu{
+		position: fixed;
+		left: -100%;
+		top: 108px;
+		gap: 0;
+		flex-direction: column;
+		background: khaki;
+		width: 100%;
+		text-align: center;
+		transition: 1s ease;
+	}
+
+	.choices{
+		margin: 16px 0;
+	}
+
+	.menu.active{
+		left: 0;
+	}
+}
+
+.main-board{
+	background-image: url(images/airplane.jpg);
+	background-position: center;
+	height: 550px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 85%;
+	margin: auto;
+	border-radius: 30px;
+
+}
+
+.slogan{
+	font-style: italic;
+}
+
+.sline1{
+	padding-top: 100px;
+	padding-left: 100px;
+	font-weight: bold;
+	color: darkolivegreen;
+	font-size: 50px;
+}
+
+
+.sline2{
+	padding-top: 30px;
+	padding-left: 150px;
+	font-weight: bold;
+	color: darkolivegreen;
+	font-size: 50px;
+}
+
+
+.sline3{
+	padding-top: 30px;
+	padding-left: 200px;
+	font-weight: bold;
+	color: darkolivegreen;
+	font-size: 50px;
+}
+
+
+.sline4{
+	padding-top: 30px;
+	padding-left: 250px;
+	font-weight: bold;
+	color: darkolivegreen;
+	font-size: 50px;
+}
+
+.container{
+	display: flex;
+	border: 5px solid darkolivegreen;
+	border-radius: 20px;
+	width: 60%;
+	margin: auto;
+	margin-top:30px;
+	justify-content: space-around;
+	align-items: center;
+	height: 400px;
+	background: darkkhaki;
+	min-width: 700px;
+}
+
+.boxtitle{
+	text-decoration: none;
+	color: black;
+	transition: 1.2s ease;
+}
+
+.boxtitle:hover{
+	color: brown;
+}
+
+.programs a{
+	text-decoration: none;
+	color: black;
+}
+
+.programs a:hover{
+	color: white;
+}
+
+p{
+	width: 300px;
+}
+
+.trainings h1{
+	text-align: center;
+}
+
+.fleet h1{
+	text-align: center;
+}
+
+.facilities h1{
+	text-align: center;
+}
+
+.team{
+	margin-top: 50px;
+	padding-bottom: 30px;
+}
+
+.crewtitle{
+	text-align: center;
+}
+
+.crew{
+	display: flex;
+	justify-content: space-around;
+	margin: auto;
+	margin-top: 30px;
+	flex-wrap: wrap;
+	width: 90%;
+}
+
+.imgcrw{
+	width: 150px;
+	border-radius: 20px;
+}
+
+.imgcrw:hover{
+	transform: scale(1.2);
+}
+
+.crewinfo{
+	text-align: center;
+	margin-top: 10px;
+	font-size: 15px;
+	padding-top: 8px;
+}
+
+.info{
+	width: 33%;
+	margin: auto;
+	margin-top: 20px;
+	line-height: 1.6em;
+	font-weight: bold;
+}
+
+.extrainfo{
+	text-align: center;
+	border-top: 2px solid darkolivegreen;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.btn{
+	margin-top: 20px;
+	border: 2px solid darkolivegreen;
+	width: 150px;
+	height: 50px;
+	color: black;
+	background: darkkhaki;
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 1s ease;
+}
+
+.btn:hover{
+ 	background: darkgreen;
+ 	color: white;
+}
+
+ form{
+ 	padding-top: 30px;
+ 	border-top: 2px solid darkolivegreen;
+ }
+
+ .contact{
+ 	display: flex;
+ 	justify-content: space-around;
+ }
+
+ .contacttxt p{
+ 	padding-top: 20px;
+ 	font-weight: bold;
+ 	line-height: 16pt;
+ }
+
+ .input{
+ 	padding-top: 10px;
+ }
+
+.submit{
+	border: 2px solid darkolivegreen;
+	width: 100px;
+	height: 30px;
+	background: darkkhaki;
+	cursor: pointer;
+	font-weight: bold;
+	transition: 1s ease;
+}
+
+.submit:hover{
+	background: darkgreen;
+	color: white;
+}
+
+#footer{
+	background: darkolivegreen;
+	text-align: center;
+	margin-top: 30px;
+	padding-top: 30px;
+}
+
+.footerpanel{
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 20px;
+}
+
+.footertitle{
+	text-decoration: none;
+	color: black;
+	transition: 1.2s ease;
+}
+
+.footertitle:hover{
+	color: khaki;
+}
+
+.list{
+	list-style: none;
+	padding-top: 10px;
+}
+
+.list a{
+	text-decoration: none;
+	color: black;
+}
+
+.list a:hover{
+	color: white;
+}
+
+.brand{
+	padding-top: 30px;
+	
+}
+
+.scroll-to-top{
+	position: fixed;
+	bottom: 50px;
+	right: 20px;
+	border-radius:50%;
+	cursor: pointer;
+	height: 75px;
+	width: 75px;
+	background: whitesmoke;
+	border: 2px solid darkolivegreen;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.scroll-to-top img{
+	width: 50px;
+	height: 50px;
+}
